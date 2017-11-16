@@ -1,5 +1,5 @@
  Info
--------
+======
 
 This image provides the spotify on headless environments, for use with SpotifyConnect.
 This is based on the archlinux base image and xvfb as virtual x server.
@@ -9,18 +9,18 @@ Tested on x86-64.
 
 
  Install
----------
+=========
 
  Alsa/Host Audio
-==============
+-----------------
 For plain use, i.e. using the hosts alsa, it is required to map `/dev/snd` to the container and run in privilege.
 (`-v /dev/snd:/dev/snd --privileged`)
 
  First run/Login
-=============
+-----------------
 On first run, for login, the client must be run in actual graphic environment.
 To keep it light weight, ssh with XForward is preconfigured. Follow the steps to login:
-1. Run bash in container: `docker exec -iy [container-name] "\bin\bash"`
+1. Run bash in container: `docker exec -it [container-name] "\bin\bash"`
 2. Set root password: `passwd`
 3. Generate ssh host keys: `ssh-keygen -A`
 4. Start sshd: `sshd -D`
