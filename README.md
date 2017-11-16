@@ -23,7 +23,7 @@ To keep it light weight, ssh with XForward is preconfigured. Follow the steps to
 1. Run bash in container: `docker exec -it [container-name] "/bin/bash"`
 2. Set root password: `passwd`
 3. Generate ssh host keys: `ssh-keygen -A`
-4. Start sshd: `sshd -D`
+4. Start sshd: `/usr/bin/sshd -D`
 5. Switch to terminal on host to get sshd port: `docker port [container-name]`
 6. Switch to terminal on machine with X server: `ssh root@[host-ip] -p[port] -X spotify`
 7. Login
