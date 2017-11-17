@@ -3,7 +3,7 @@
 
 This image provides the spotify on headless environments, for use with SpotifyConnect.
 This is based on the archlinux base image and xvfb as virtual x server.
-The spotify client is based on the archlinux aur spotify package[1]. So the version is based on this and report there if not up-to-date and the version of image and aur match.
+The spotify client is based on the archlinux [aur spotify package]. So the version is based on this and report there if not up-to-date and the version of image and aur match.
 Tested on x86-64.
 **As long as I don't know about spotify redistribution rules, I won't provide a prebuild container. So you have to clone the git repository and build it on your own**
 
@@ -37,4 +37,4 @@ To keep it light weight, ssh with XForward is preconfigured. Follow the steps to
 ------------
 A problem I encountered on a host system with alsa upmix (upmix plugin). It (plug:upmix51) wasn't used/known by the container, instead uses hw:0,0 as default. That is because upmixing have to happen on client/container. So you might link/copy the host `/etc/asound.conf` to the container and install alsa-plugins inside (`pacman -S alsa-plugins`).
 
-[1]:https://aur.archlinux.org/packages/spotify/
+[aur spotify package]:https://aur.archlinux.org/packages/spotify/
