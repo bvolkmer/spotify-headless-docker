@@ -1,5 +1,5 @@
- Info
-======
+ Info (discontiued)
+====================
 
 This image provides the spotify on headless environments, for use with SpotifyConnect.
 This is based on the archlinux base image and xvfb as virtual x server.
